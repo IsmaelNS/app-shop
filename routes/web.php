@@ -22,3 +22,20 @@ Route::get('/prueba', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+
+Route::middleware(['auth','admin'])->prefix('admin')->group(function () {
+    Route::get('/products','ProductController@index');//listado
+    Route::get('/products/create','ProductController@create');//Crear
+    Route::post('/products','ProductController@store');//Registra
+    Route::get('/products/{id}/edit','ProductController@edit');//Formulario Edicion
+    Route::post('/products/{id}/edit','ProductController@update');//actualizar
+    Route::delete('/products/{id}','ProductController@destroy');//Formulario Eliminar
+
+    Route::get('/products/{id}/images','ImageController@index');//listado
+    Route::post('/products/{id}/images','ImageController@store');//Registra
+    Route::delete('/products/{id}/images','ImageController@store');//Formulario Eliminar
+
+
+
+});
