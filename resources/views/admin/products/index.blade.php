@@ -91,7 +91,7 @@ table.table .form-control.error {
         <div class="table-wrapper">
             <div class="table-title">
                 <div class="row">
-                    <div class="col-sm-8"><h2>Employee <b>Details</b></h2></div>
+                    <div class="col-sm-8"><h2><b>Productos</b></h2></div>
                     <div class="col-sm-4">
                         <a href="{{url('/admin/products/create')}}" class="btn btn-info add-new"><i class="fa fa-plus"></i>Nuevo Producto</a>
                     </div>
@@ -120,7 +120,7 @@ table.table .form-control.error {
                               {{method_field('DELETE')}}
                               <a class="add" title="Add" data-toggle="tooltip"><i class="material-icons"></i></a>
                               <a href="{{url('/admin/products/'.$product->id.'/edit')}}" class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons"></i></a>
-                              <a href="{{url('')}}" class="imagen" title="Imagen Producto" data-toggle="tooltip"><i class="material-icons"></i></a>
+                              <a href="{{url('/admin/products/'.$product->id.'/images')}}" class="imagen" title="Imagen Producto" data-toggle="tooltip"><i class="fa fa-image"></i></a>
                               <button type="submit" class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons"></i></button>
                             </form>
                         </td>

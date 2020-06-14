@@ -34,7 +34,7 @@ Route::middleware(['auth','admin'])->prefix('admin')->group(function () {
 
     Route::get('/products/{id}/images','ImageController@index');//listado
     Route::post('/products/{id}/images','ImageController@store');//Registra
-    Route::delete('/products/{id}/images','ImageController@store');//Formulario Eliminar
+    Route::delete('/products/{id}/images','ImageController@destroy');//Formulario Eliminar
 
 
 
