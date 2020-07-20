@@ -126,6 +126,7 @@ table.table .form-control.error {
                         </td>
                     </tr>
                     @endforeach
+                  </tbody>
             </table>
             {{$products->links()}}
         </div>

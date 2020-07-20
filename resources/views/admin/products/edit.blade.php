@@ -31,7 +31,6 @@
            <button class="btn btn-primary">Guardar Cambios</button>
            <a href="{{url('/admin/products')}}">Cancelar</a>
      </div>
-
      </form>
   </div>
 </div>

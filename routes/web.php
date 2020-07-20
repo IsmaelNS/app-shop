@@ -24,6 +24,11 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/products/{id}','ProductController@show');//Formulario Edicion
 
+//Se crea el Middleware Admin con su respectivo  metodo
+//En el kernel registramos nuestro middleware como admin
+//prefix es porque admin aparecia en la ruta con esto ya no la repito en la ruta
+//namespace es porque se creo la carpeta Admin en la ruta de los controldores y
+// se puede hacer referencia en lugar de que aparesca en todas las rutas
 
 Route::middleware(['auth','admin'])->prefix('admin')->namespace('Admin')->group(function () {
     Route::get('/products','ProductController@index');//listado

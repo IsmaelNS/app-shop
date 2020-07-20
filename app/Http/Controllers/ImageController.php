@@ -16,6 +16,7 @@ class ImageController extends Controller
       $images = $product->images;
       return view('admin.products.images.index')->with(compact('product','images'));
     }
+
     public function store(Request $request , $id)
     {
       $file = $request->file('photo');
@@ -32,6 +33,7 @@ class ImageController extends Controller
 
       return back();
     }
+    
     public function destroy(Request $request , $id)
     {
       $productImage =  ProductImage::find($request->image_id);
